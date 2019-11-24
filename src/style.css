@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+#demo {
+    word-break: break-all;
+}
+
+#taiji {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#taiji::before {
+    content: '';
+    position: absolute;
+    display: block;
+}
+
+#taiji::after {
+    content: '';
+    position: absolute;
+    display: block;
+}
+
+@media(max-width:500px) {
+    #demo {
+        height: 50vh;
+        overflow: auto;
+    }
+
+    #divWrapper {
+        height: 50vh;
+    }
+
+    #taiji {
+        position: relative;
+        top: 20px;
+        right: 0;
+    }
+
+}
